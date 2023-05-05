@@ -24,4 +24,6 @@ runs:
     ENDPOINT: ${{ inputs.endpoint }}
     ACCESS_KEY: ${{ inputs.access_key }}
     SECRET_KEY: ${{ inputs.secret_key }}
-    CMD: ${{ inputs.run }}
+    TARGET: ${{ inputs.target }}
+  args:
+    - ${{ inputs.cmd }}

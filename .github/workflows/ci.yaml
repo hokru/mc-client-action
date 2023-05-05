@@ -1,0 +1,31 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Verify Docker image build
+      run: docker build . --file Dockerfile
+
+    - name: test minio on play
+      uses: ./
+      id: playtest
+      with:
+        endpoint: play.min.io
+        accesskey: ${{secrets.accesskey}}
+        secretkey: ${{secrets.secretkey}}
+        target: play
+        cmd: "mc ls play"
+     

@@ -27,3 +27,6 @@ runs:
     TARGET: ${{ inputs.target }}
   args:
     - ${{ inputs.cmd }}
+branding:
+  icon: 'box'
+  color: 'blue'

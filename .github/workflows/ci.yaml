@@ -25,8 +25,8 @@ jobs:
       id: playtest
       with:
         endpoint: play.min.io
-        accesskey: ${{secrets.accesskey}}
-        secretkey: ${{secrets.secretkey}}
+        access_key: ${{secrets.accesskey}}
+        secret_key: ${{secrets.secretkey}}
         target: play
         cmd: "mc ls play"
      

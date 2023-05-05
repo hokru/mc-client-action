@@ -1,0 +1,27 @@
+name: "MC Client Action"
+description: "access to mc client in github action"
+author: "hokru"
+inputs:
+  endpoint:
+    description: "S3 endpoint without http prefix"
+    required: true
+  access_key:
+    description: "Access key"
+    required: true
+  secret_key:
+    description: "Secret key"
+    required: true
+  target:
+    description: "name of s3 provider"
+    default: "minio"
+  cmd:
+    description: "mc command. The default provider name is <minio>"
+    default: ""
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  env:
+    ENDPOINT: ${{ inputs.endpoint }}
+    ACCESS_KEY: ${{ inputs.access_key }}
+    SECRET_KEY: ${{ inputs.secret_key }}
+    CMD: ${{ inputs.run }}

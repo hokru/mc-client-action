@@ -5,14 +5,14 @@ This action sets up the minio target and credentials internally via the `MC_HOST
 ## Example
 ```
 - name: test minio on play
-      uses: ./
-      id: playtest
-      with:
-        endpoint: play.min.io
-        access_key: ${{secrets.accesskey}}
-        secret_key: ${{secrets.secretkey}}
-        alias: play
-        cmd: "mc ls play"
+  uses: ./
+  id: playtest
+  with:
+    endpoint: play.min.io
+    access_key: ${{secrets.accesskey}}
+    secret_key: ${{secrets.secretkey}}
+    alias: play
+    cmd: "mc ls play"
 ```
 
 ## Keywords

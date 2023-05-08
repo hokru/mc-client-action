@@ -11,7 +11,7 @@ inputs:
   secret_key:
     description: "Secret key"
     required: true
-  target:
+  alias:
     description: "name of s3 provider"
     default: "minio"
   cmd:
@@ -24,7 +24,7 @@ runs:
     ENDPOINT: ${{ inputs.endpoint }}
     ACCESS_KEY: ${{ inputs.access_key }}
     SECRET_KEY: ${{ inputs.secret_key }}
-    TARGET: ${{ inputs.target }}
+    ALIAS: ${{ inputs.alias }}
   args:
     - ${{ inputs.cmd }}
 branding:

@@ -1,6 +1,6 @@
 # mc-client-action
 Provisioning of the minio `mc` client for Github Action.
-This action sets up the minio target and credentials internally via the `MC_HOST` environmental variable, avoiding the need to write credentials to file with `mc alias set`.
+This action sets up the minio target and credentials internally via the `MC_HOST` environmental variable.
 
 ## Example
 ```

@@ -21,4 +21,5 @@ This action sets up the minio target and credentials internally via the `MC_HOST
 * `access_key`: access key or username
 * `secret_key`: secret key or password
 * `alias` : The name of the S3 service. Default = `minio`
+* `workdir`: working_directory support
 * `cmd`: The full mc client command using the `alias`.

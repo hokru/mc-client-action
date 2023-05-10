@@ -10,3 +10,5 @@ fi
 export CMD=$1
 # echo "text=Running: $CMD" >> $GITHUB_OUTPUT
 $CMD
+#exec /usr/local/bin/gosu user "$@"
+

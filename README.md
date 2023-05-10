@@ -4,9 +4,8 @@ This action sets up the minio target and credentials internally via the `MC_HOST
 
 ## Example
 ```
-- name: test minio on play
-  uses: ./
-  id: playtest
+- name: Test on min.io play
+  uses: hokru/mc-client-action@v0.9.3
   with:
     endpoint: play.min.io
     access_key: ${{secrets.accesskey}}
